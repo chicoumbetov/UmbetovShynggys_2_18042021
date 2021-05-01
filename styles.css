@@ -1,0 +1,18 @@
+:root {
+    --blue: #0065FC;
+    --claireGris: #DEEBFF;
+    --gris: #F2F2F2;
+}
+
+p {
+    color: var(--blue);
+}
+
+figure {
+    height: 10;
+    width: 10;
+}
+
+.popular {
+    background-color: var(--claireGris);
+}

@@ -3,90 +3,246 @@
   <head>
     <meta charset="utf-8" />
     <title>Reservia</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
-    <div>
-      <p id="main">
-        Reservia
-        <button>S'inscrire</button>
-      </p>
+    <header id="main" class="header container">
+      <img
+        class="logo"
+        src="images/logo/Reservia.svg"
+        alternative="Reservia logo"
+      />
+      <a class="nav-sign-in">S'inscrire</a>
 
-      <!-- Comment -->
-      <p>
-        <a href="#hebergements" title="Allez dans la section hébergements">
+      <!-- Navigation buttons -->
+      <nav>
+        <a
+          href="#hebergements"
+          class="nav-link nav-link-active"
+          title="Allez dans la section hébergements"
+        >
           Hébergements
         </a>
-        <a href="#activites" title="Allez dans la section activités">
+        <a
+          href="#activities"
+          class="nav-link"
+          title="Allez dans la section activités"
+        >
           Activités
         </a>
-      </p>
+      </nav>
+    </header>
 
-      <h2>Trouvez votre hébergements pour des vacances de rêve</h2>
-      <h3>En plein centre ville ou en pleine nature</h3>
+    <main class="main container">
+      <!-- Search -->
+      <section class="research">
+        <h1 class="search-title">
+          Trouvez votre hébergements pour des vacances de rêve
+        </h1>
+        <p class="search-sub-title">
+          En plein centre ville ou en pleine nature
+        </p>
+        <!-- Forms -->
+        <form action="#" class="form-search">
+          <span class="form-search-left"></span>
+          <input
+            class="form-search-input"
+            type="search"
+            placeholder="Marseille, France"
+          />
+          <button type="submit" class="form-search-submit">Lupa</button>
+        </form>
+        <!-- Filters -->
+        <div class="filters">
+          <button>Economique</button>
+          <button>Familial</button>
+          <button>Romantique</button>
+          <button>Animaux autorisés</button>
+        </div>
+        <!-- Results -->
 
-      <!-- Les plus populaires -->
-      <h2>Les plus populaires</h2>
-      <img
-        src="images/hebergements/4_small/emile-guillemot.jpg"
-        alt="Hôtel Le Soleil du matin"
-      />
-      <img
-        src="images/hebergements/4_small/aw-creative.jpg"
-        alt="Au coeur de l'eau Chambres d'hôtes"
-      />
-
-      <img
-        src="images/hebergements/4_small/febrian-zakaria.jpg"
-        alt="Hôtel Tout bleu et Blanc"
-      />
+        <div class="results">
+          Plus de 500 logements sont disponibles dans cette ville
+          <!-- Les plus populaires -->
+        </div>
+      </section>
 
       <!-- Hébergements -->
-      <h2 id="hebergements">Hébergements à Marseille</h2>
-      <img
-        src="images/hebergements/3_medium/marcus-lokeMedium.jpg"
-        alt="Auberge la Cannebière"
-      />
-      <img
-        src="images/hebergements/3_medium/fred-kleberMedium.jpg"
-        alt="Hôtel du port"
-      />
-      <img
-        src="images/hebergements/3_medium/reisetopiaMedium.jpg"
-        alt="Hôtel Les mouettes"
-      />
-      <img
-        src="images/hebergements/4_small/annie-spratt.jpg"
-        alt="Hôtel de la mer"
-      />
+      <section id="hebergements" class="hebergements">
+        <div class="hebergContainer">
+          <h2>Hébergements à Marseille</h2>
 
-      <!-- Activités -->
-      <h2 id="activites">Activités à Marseille</h2>
-      <img
-        src="images/hebergements/3_medium/reisetopiaMedium.jpg"
-        alt="Hôtel Les mouettes"
-      />
-      <img
-        src="images/hebergements/4_small/annie-spratt.jpg"
-        alt="Hôtel de la mer"
-      />
-      <button>
-        <a href="#main">Main</a>
-      </button>
+          <div class="hebergements-square item1">
+            <figure>
+              <img
+                src="images/hebergements/4_small/marcusLokeSmall.jpg"
+                alt="Auberge la Cannebière"
+              />
+            </figure>
+            <h3>Auberge la Cannebière</h3>
+          </div>
 
-      <div>
-        <h2>A propos</h2>
-        <div>Fonctionnement du site</div>
-        <div>Conditions généralse de vente</div>
-        <div>Données et confidentialité</div>
+          <div class="hebergements-square item2">
+            <figure>
+              <img
+                src="images/hebergements/4_small/fred-kleberSmall.jpg"
+                alt="Hôtel du port"
+              />
+            </figure>
+            <h3>Hôtel du port</h3>
+          </div>
 
-        <h2>Nos hébergements</h2>
-        <div>Charte qualité</div>
-        <div>Soumettre votre hôtel</div>
+          <div class="hebergements-square item3">
+            <figure>
+              <img
+                src="images/hebergements/4_small/reisetopiaSmall.jpg"
+                alt="Hôtel Les mouettes"
+              />
+            </figure>
+            <h3>Hôtel Les mouettes</h3>
+          </div>
 
-        <h2>Assistance</h2>
-        <div>Centre d'aide</div>
-        <div>Nous contacter</div>
-      </div>
-    </div>
+          <div class="hebergements-square item4">
+            <figure>
+              <img
+                src="images/hebergements/4_small/annie-spratt.jpg"
+                alt="Hôtel de la mer"
+              />
+            </figure>
+            <h3>Hôtel de la mer</h3>
+          </div>
+
+          <div class="hebergements-square item5">
+            <figure>
+              <img
+                src="images/hebergements/4_small/nicateSmall.jpg"
+                alt="Auberge Le Panier"
+              />
+            </figure>
+            <h3>Auberge Le Panier</h3>
+          </div>
+
+          <div class="hebergements-square item6">
+            <figure>
+              <img
+                src="images/hebergements/4_small/febrian-zakariaSmall.jpg"
+                alt="Hôtel chez Amina"
+              />
+            </figure>
+            <h3>Hôtel chez Amina</h3>
+          </div>
+        </div>
+
+        <!-- Popular -->
+        <aside class="popular">
+          <h2>Les plus populaires</h2>
+          <i class="fas fa-camera"></i>
+
+          <div class="popular-square item1">
+            <figure>
+              <img
+                src="images/hebergements/4_small/emile-guillemot.jpg"
+                alt="Hôtel Le Soleil du matin"
+              />
+            </figure>
+            <h3>Hôtel Le Soleil du matin</h3>
+          </div>
+
+          <div class="popular-square item2">
+            <figure>
+              <img
+                src="images/hebergements/4_small/aw-creative.jpg"
+                alt="Au coeur de l'eau Chambres d'hôtes"
+              />
+            </figure>
+            <h3>Au coeur de l'eau Chambres d'hôtes</h3>
+          </div>
+
+          <div class="popular-square item3">
+            <figure>
+              <img
+                src="images/hebergements/4_small/febrian-zakaria.jpg"
+                alt="Hôtel Tout bleu et Blanc"
+              />
+            </figure>
+            <h3>Hôtel Tout bleu et Blanc</h3>
+          </div>
+        </aside>
+
+        <h3>Afficher plus</h3>
+      </section>
+
+      <!-- Activities -->
+      <section id="activities">
+        <h2>Activités à Marseille</h2>
+        <div class="activity-square item1">
+          <figure>
+            <img
+              src="images/activites/4_small/reno-laithienneSmall.jpg"
+              alt="Vieux Port"
+            />
+          </figure>
+          <h3>Vieux Port</h3>
+        </div>
+
+        <div class="activity-square item2">
+          <figure>
+            <img
+              src="images/activites/4_small/paul-hermannSmall.jpg"
+              alt="Fort de Pomègues"
+            />
+          </figure>
+          <h3>Fort de Pomègues</h3>
+        </div>
+
+        <div class="activity-square item3">
+          <figure>
+            <img
+              src="images/activites/4_small/kevin-hikariSmall.jpg"
+              alt="Îles du Frioul"
+            />
+          </figure>
+          <h3>Îles du Frioul</h3>
+        </div>
+
+        <div class="activity-square item4">
+          <figure>
+            <img
+              src="images/activites/4_small/kilyan-sockalingumSmall.jpg"
+              alt="Parc National des Calanques"
+            />
+          </figure>
+          <h3>Parc National des Calanques</h3>
+        </div>
+
+        <div class="activity-square item5">
+          <figure>
+            <img
+              src="images/activites/4_small/lena-paulinSmall.jpg"
+              alt="Parc Longchamp"
+            />
+          </figure>
+          <h3>Parc Longchamp</h3>
+        </div>
+      </section>
+    </main>
+    <button>
+      <a href="#main">Back to Top</a>
+    </button>
+
+    <footer>
+      <h2>A propos</h2>
+      <div>Fonctionnement du site</div>
+      <div>Conditions généralse de vente</div>
+      <div>Données et confidentialité</div>
+
+      <h2>Nos hébergements</h2>
+      <div>Charte qualité</div>
+      <div>Soumettre votre hôtel</div>
+
+      <h2>Assistance</h2>
+      <div>Centre d'aide</div>
+      <div>Nous contacter</div>
+    </footer>
   </body>
 </html>
