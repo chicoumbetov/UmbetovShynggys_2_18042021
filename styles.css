@@ -1,18 +1,79 @@
+/*
+header
+
+main part
+    hebergements styles
+    activities styles
+    popular styles
+
+footer
+
+
+*/
+
+*
+{
+    font-family: 'Raleway', sans-serif;
+}
+
 :root {
     --blue: #0065FC;
     --claireGris: #DEEBFF;
     --gris: #F2F2F2;
 }
 
-p {
+/* header */
+#main {
+
+}
+
+.nav-sign-in {
     color: var(--blue);
 }
 
+.header {
+    font-weight: bold;
+}
+
+.nav-link {
+  color: black;   
+}
+
+.nav-link-active {
+    color: var(--blue);
+}
+
+.container {
+
+}
+
+/* main part */
+.main {
+
+}
+
+.container {
+
+}
+
+.search-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.search-sub-title {
+    color: gray;
+}
+
+/* hebergements styles */
 figure {
     height: 10;
     width: 10;
 }
 
+/* activities styles */
+
+/* popular styles */
 .popular {
     background-color: var(--claireGris);
 }

@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <title>Reservia</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   </head>
   <body>
     <header id="main" class="header container">
@@ -36,9 +38,9 @@
     <main class="main container">
       <!-- Search -->
       <section class="research">
-        <h1 class="search-title">
+        <div class="search-title">
           Trouvez votre hébergements pour des vacances de rêve
-        </h1>
+        </div>
         <p class="search-sub-title">
           En plein centre ville ou en pleine nature
         </p>
@@ -53,6 +55,7 @@
           <button type="submit" class="form-search-submit">Lupa</button>
         </form>
         <!-- Filters -->
+        <div class="filter-title">Filtres</div>
         <div class="filters">
           <button>Economique</button>
           <button>Familial</button>
@@ -74,10 +77,14 @@
 
           <div class="hebergements-square item1">
             <figure>
-              <img
-                src="images/hebergements/4_small/marcusLokeSmall.jpg"
-                alt="Auberge la Cannebière"
-              />
+              <a href="images/hebergements/3_medium/marcus-lokeMedium.jpg">
+                <img
+                  src="images/hebergements/4_small/marcusLokeSmall.jpg"
+                  alt="Auberge la Cannebière"
+                  title="Auberge la Cannebière"
+                />
+              </a>
+              <figcaption>Auberge la Cannebière</figcaption>
             </figure>
             <h3>Auberge la Cannebière</h3>
           </div>
