@@ -4,9 +4,15 @@
     <meta charset="utf-8" />
     <title>Reservia</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/72b510f59e.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/72b510f59e.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header id="main" class="header container">
@@ -23,58 +29,127 @@
           href="#hebergements"
           class="nav-link nav-link-active"
           title="Allez dans la section hébergements"
+          >Hébergements</a
         >
-          Hébergements
-        </a>
         <a
           href="#activities"
           class="nav-link"
           title="Allez dans la section activités"
+          >Activités</a
         >
-          Activités
-        </a>
       </nav>
     </header>
 
     <main class="main container">
       <!-- Search -->
       <section class="research">
-        <div class="search-title">
+        <p class="search-title">
           Trouvez votre hébergements pour des vacances de rêve
-        </div>
+        </p>
         <p class="search-sub-title">
           En plein centre ville ou en pleine nature
         </p>
         <!-- Forms -->
-        <form action="#" class="form-search">
-          <span class="form-search-left"></span>
+        <form action="#" class="form-search-main">
+          <i class="fas fa-map-marker-alt fa-4x"></i>
           <input
             class="form-search-input"
             type="search"
             placeholder="Marseille, France"
           />
-          <button type="submit" class="form-search-submit">Lupa</button>
+          <i class="fas fa-search fa-4x"></i>
         </form>
+
         <!-- Filters -->
-        <div class="filter-title">Filtres</div>
+        <p class="section-header-title">Filtres</p>
         <div class="filters">
-          <button>Economique</button>
-          <button>Familial</button>
-          <button>Romantique</button>
-          <button>Animaux autorisés</button>
+          <form class="filter-button">
+            <i class="fas fa-money-bill-wave fa-4x"></i>
+            <button>Economique</button>
+          </form>
+
+          <form class="filter-button">
+            <i class="fas fa-child fa-4x" data-fa-transform="shrink-8"></i>
+            <button>Familial</button>
+          </form>
+
+          <form class="filter-button">
+            <i class="fas fa-heart fa-4x"></i>
+            <button>Romantique</button>
+          </form>
+
+          <form class="filter-button">
+            <i class="fas fa-dog fa-4x"></i>
+            <button>Animaux autorisés</button>
+          </form>
         </div>
         <!-- Results -->
 
-        <div class="results">
-          Plus de 500 logements sont disponibles dans cette ville
-          <!-- Les plus populaires -->
+        <div class="info-style">
+          <div class="info-sign">
+            <i class="fas fa-info fa-3x"></i>
+          </div>
+          <p class="results">
+            Plus de 500 logements sont disponibles dans cette ville
+          </p>
         </div>
       </section>
 
       <!-- Hébergements -->
       <section id="hebergements" class="hebergements">
+        <!-- Popular -->
+        <aside class="popular">
+          <div class="popularContainer">
+            <div class="popular-title">
+              <p class="section-header-title">Les plus populaires</p>
+              <i class="fas fa-chart-line fa-4x"></i>
+            </div>
+
+            <div class="popular-square item1">
+              <figure>
+                <img
+                  src="images/hebergements/4_small/emile-guillemot.jpg"
+                  alt="Hôtel Le Soleil du matin"
+                />
+              </figure>
+              <div class="popular-right-side">
+                <h3>Hôtel Le Soleil du matin</h3>
+                <h3>Nuit à partir de 71 €</h3>
+
+                <div class="star">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="popular-square item2">
+              <figure>
+                <img
+                  src="images/hebergements/4_small/aw-creative.jpg"
+                  alt="Au coeur de l'eau Chambres d'hôtes"
+                />
+              </figure>
+              <h3>Au coeur de l'eau Chambres d'hôtes</h3>
+            </div>
+
+            <div class="popular-square item3">
+              <figure>
+                <img
+                  src="images/hebergements/4_small/febrian-zakaria.jpg"
+                  alt="Hôtel Tout bleu et Blanc"
+                />
+              </figure>
+              <h3>Hôtel Tout bleu et Blanc</h3>
+            </div>
+          </div>
+        </aside>
+
         <div class="hebergContainer">
-          <h2>Hébergements à Marseille</h2>
+          <p class="section-header-title">Hébergements à Marseille</p>
 
           <div class="hebergements-square">
             <figure>
@@ -86,15 +161,15 @@
                 />
               </a>
             </figure>
-            
-              <h3>Auberge la Cannebière</h3>
-              <p>Nuit à partir de 128 €</p>
+
+            <h3>Auberge la Cannebière</h3>
+            <p>Nuit à partir de 128 €</p>
             <div class="star">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>            
+              <i class="fas fa-star"></i>
             </div>
           </div>
 
@@ -149,96 +224,62 @@
           </div>
         </div>
 
-        <!-- Popular -->
-        <aside class="popular">
-          <h2>Les plus populaires</h2>
-          <i class="fas fa-camera"></i>
-
-          <div class="popular-square item1">
-            <figure>
-              <img
-                src="images/hebergements/4_small/emile-guillemot.jpg"
-                alt="Hôtel Le Soleil du matin"
-              />
-            </figure>
-            <h3>Hôtel Le Soleil du matin</h3>
-          </div>
-
-          <div class="popular-square item2">
-            <figure>
-              <img
-                src="images/hebergements/4_small/aw-creative.jpg"
-                alt="Au coeur de l'eau Chambres d'hôtes"
-              />
-            </figure>
-            <h3>Au coeur de l'eau Chambres d'hôtes</h3>
-          </div>
-
-          <div class="popular-square item3">
-            <figure>
-              <img
-                src="images/hebergements/4_small/febrian-zakaria.jpg"
-                alt="Hôtel Tout bleu et Blanc"
-              />
-            </figure>
-            <h3>Hôtel Tout bleu et Blanc</h3>
-          </div>
-        </aside>
-
-        <h3>Afficher plus</h3>
+        <p class="subtitle">Afficher plus</p>
       </section>
 
       <!-- Activities -->
-      <section id="activities">
-        <h2>Activités à Marseille</h2>
-        <div class="activity-square item1">
-          <figure>
-            <img
-              src="images/activites/4_small/reno-laithienneSmall.jpg"
-              alt="Vieux Port"
-            />
-          </figure>
-          <h3>Vieux Port</h3>
-        </div>
+      <section id="activities" class="activity">
+        <div class="activContainer">
+          <p class="section-header-title">Activités à Marseille</p>
+          <div class="activity-square item1">
+            <figure>
+              <img
+                src="images/activites/4_small/reno-laithienneSmall.jpg"
+                alt="Vieux Port"
+              />
+            </figure>
+            <h3>Vieux Port</h3>
+          </div>
 
-        <div class="activity-square item2">
-          <figure>
-            <img
-              src="images/activites/4_small/paul-hermannSmall.jpg"
-              alt="Fort de Pomègues"
-            />
-          </figure>
-          <h3>Fort de Pomègues</h3>
-        </div>
+          <div class="activity-square item2">
+            <figure>
+              <img
+                src="images/activites/4_small/paul-hermannSmall.jpg"
+                alt="Fort de Pomègues"
+              />
+            </figure>
+            <h3>Fort de Pomègues</h3>
+          </div>
 
-        <div class="activity-square item3">
-          <figure>
-            <img
-              src="images/activites/4_small/kevin-hikariSmall.jpg"
-              alt="Îles du Frioul"
-            />
-          </figure>
-          <h3>Îles du Frioul</h3>
-        </div>
+          <div class="activity-square item3">
+            <figure>
+              <img
+                src="images/activites/4_small/kevin-hikariSmall.jpg"
+                alt="Îles du Frioul"
+              />
+            </figure>
+            <h3>Îles du Frioul</h3>
+          </div>
 
-        <div class="activity-square item4">
-          <figure>
-            <img
-              src="images/activites/4_small/kilyan-sockalingumSmall.jpg"
-              alt="Parc National des Calanques"
-            />
-          </figure>
-          <h3>Parc National des Calanques</h3>
-        </div>
+          <div class="activity-square item4">
+            <figure>
+              <img
+                src="images/activites/4_small/kilyan-sockalingumSmall.jpg"
+                alt="Parc National des Calanques"
+              />
+            </figure>
+            <h3>Parc National des Calanques</h3>
+          </div>
 
-        <div class="activity-square item5">
-          <figure>
-            <img
-              src="images/activites/4_small/lena-paulinSmall.jpg"
-              alt="Parc Longchamp"
-            />
-          </figure>
-          <h3>Parc Longchamp</h3>
+          <div class="activity-square item5">
+            <figure>
+              <img
+                src="images/activites/4_small/lena-paulinSmall.jpg"
+                alt="Parc Longchamp"
+              />
+            </figure>
+            <h3>Parc Longchamp</h3>
+          </div>
         </div>
       </section>
     </main>
