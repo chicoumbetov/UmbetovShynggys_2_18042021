@@ -27,6 +27,11 @@ a {
 
 /************* header **********/
 /* grid template 6fr 3fr */
+header, main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 header {
   display: flex;
   flex-wrap: wrap;
@@ -49,9 +54,7 @@ body {
 
 .logo {
   height: 8rem;
-  margin-inline: 4rem;
-  margin-bottom: 4rem;
-
+  padding: 0 20px;
   grid-area: logo;
 }
 
@@ -59,7 +62,8 @@ body {
   justify-self: flex-end;
   color: var(--blue);
   font-size: 3rem;
-  padding-inline: 4rem;
+  padding: 2rem;
+  font-weight: 600;
 
   grid-area: navSignIn;
 }
