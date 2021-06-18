@@ -12,7 +12,6 @@ footer
 * {
   font-family: "Raleway", sans-serif;
   box-sizing: border-box;
-
 }
 
 :root {
@@ -28,7 +27,7 @@ a {
 
 /************* header **********/
 /* grid template 6fr 3fr */
-header, main {
+main {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 10px;
@@ -46,22 +45,20 @@ header {
     header {
       display: grid;
       grid-template-areas: 
-          "logo . nav nav-sign-in"
-          ". . . .";
+          "logo . nav nav-sign-in";
       grid-template-columns: auto 1fr auto auto;
     }
 }
 
 .logo {
-  height: 2.8rem;
-  padding: 0 10px;
+  padding: 10px 20px;
   grid-area: logo;
 }
 
 .nav-sign-in {
   justify-self: flex-end;
   color: var(--blue);
-  font-size: 1.2rem;
+  font-size: 1rem;
   
   font-weight: 600;
   padding: 0 1rem 0 1rem;
@@ -78,36 +75,36 @@ nav {
 
 .nav-link {
   color: black;
+  font-size: 1rem;
+  font-weight: 500;
   width: 50%;
   text-align: center;
 
-  padding: 0.5rem 2rem 0.5rem 2rem;
+  padding: 2rem;
 
-  border-bottom: 5px solid var(--gris);
+  border-bottom: 3px solid var(--gris);
 }
 
-.nav-link:hover,
-.nav-sign-in:hover {
+.nav-link:hover {
   color: var(--blue);
-  border-bottom: 5px solid var(--blue);
+  border-bottom: 3px solid var(--blue);
   
 }
 
 @media screen and (min-width: 562px) {
   .nav-sign-in {
     margin-top: 0px;
-    padding-top: 10px;
   }
   .nav-link {
-    padding-top: 10px;
-    border-top: 5px solid var(--gris);
-    border-bottom: 5px solid transparent;
+    width: inherit;
+    border-top: 3px solid var(--gris);
+    border-bottom: 3px solid transparent;
   }
-  .nav-sign-in:hover,
+
   .nav-link:hover {
     margin-top: 0px;
-    border-top: 5px solid var(--blue);
-    border-bottom: 5px solid transparent;
+    border-top: 3px solid var(--blue);
+    border-bottom: 3px solid transparent;
   }
 }
 
@@ -129,8 +126,13 @@ nav {
   padding: 0 1.5rem;
   width: 260px;
   flex: 1;
+  max-width: 260px;
   font-size: 1rem;
   font-weight: bold;
+}
+
+.form-search-input::placeholder {
+  color: #000;
 }
 
 .markerSpan {
@@ -147,10 +149,11 @@ nav {
 
 .buttonSearch {
  background-color: var(--blue);
+ margin-left: -1rem;
  color: white;
  font-weight: bold;
  border: none;
- border-radius: 0 1rem 1rem 0;
+ border-radius: 1rem;
  padding: 0 1.5rem;
  cursor: pointer;
 }
@@ -161,7 +164,8 @@ nav {
     margin-top: 1rem;
   }
   .section-header-title {
-    margin-right: 1rem;
+    margin-top: 1rem;
+    margin-right: 2rem;
   }
 }
 
@@ -169,10 +173,13 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: -1.5px;
   background-color: var(--claireGris);
   border-radius: 100%;
   height: 3rem;
   width: 3rem;
+  min-height: 3rem;
+  min-width: 3rem;
   color: var(--blue);
 }
 
@@ -203,27 +210,29 @@ nav {
 }
 
 .star {
-  margin: 2rem 0 10px 0;
+  margin: 2rem 0 0 0;
   color: var(--blue);
 }
 
 .info-style {
   display: flex;
   align-items: center;
-  margin-bottom: 2rem;
+  margin: 1rem 0 2rem 0;
 }
 
 .info-sign {
   color: var(--blue);
   border: solid 3px var(--gris);
-  margin-right: 2rem;
+  margin-right: 1rem;
 
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 100%;
-  height: 30px;
-  width: 30px;
+  height: 2rem;
+  width: 2rem;
+  min-height: 2rem;
+  min-width: 2rem;
 }
 
 .results {
@@ -235,6 +244,7 @@ font-weight: 500;
 .search-title {
   font-size: 1.3rem;
   font-weight: 800;
+  /*  margin-left: 0.5rem;*/
 }
 
 .subtitle {
@@ -258,7 +268,7 @@ font-weight: 500;
   grid-area: hebergements;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1049px) {
+@media (min-width: 768px) and (max-width: 1049px) {
   .hebergContainer {
     grid-template-columns: 1fr 1fr;
   }
@@ -269,7 +279,8 @@ font-weight: 500;
     display: grid;
     grid-template-areas: 
     'hebergContainer popular';
-    grid-template-columns: 8fr 4fr;
+    grid-template-columns: 6fr 3fr;
+    column-gap: 2rem;
   }
   .hebergContainer {
     display: grid;
@@ -278,32 +289,21 @@ font-weight: 500;
     background-color: var(--gris);
     border-radius: 25px;
   }
-  .popular {
-    display: grid;
-    border-radius: 1.5rem;
-    margin-left: 1rem;
-    align-items: start;
-  }
 }
 
 .hebergContainer {
   display: grid;
   
   column-gap: 2rem;
-  row-gap: 1rem;
-  padding: 0 1rem 0 1rem;
+  row-gap: 2rem;
+  padding: 2rem;
 
   grid-area: hebergContainer;
-}
-@media screen and (max-width: 1049px) {
-  .hebergContainer {
-    grid-template-columns: 1fr;
-  }
 }
 
 .hebergContainer h2 {
   grid-column: 1/-1;
-  margin: 1rem 0 0 0;
+  margin: 0;
 }
 
 .hebergements-square {
@@ -311,7 +311,7 @@ font-weight: 500;
   border-radius: 30px;
   background-color: #fff;
   box-shadow: 0 0 20px var(--gris);
-  box-sizing: border-box;
+  padding: 4px;
 
   cursor: pointer;
 }
@@ -334,7 +334,7 @@ font-weight: 500;
   height: 8rem;
   width: 100%;
   object-fit: cover;
-  border-radius: 15px 15px 0 0;
+  border-radius: 30px 30px 0 0;
 }
 
 
@@ -399,9 +399,9 @@ font-weight: 500;
 
 /*************** activities styles **********/
 
-@media screen and (max-width: 1049px) {
+
   .activity {
-    display: flex;
+    display: grid;
     flex-direction: column;
     grid-template-columns: 1fr;
   
@@ -412,7 +412,6 @@ font-weight: 500;
     padding: 0.5rem;
     margin: 0;
   }
-}
 
 .activity-square {
   display: grid;
@@ -438,43 +437,62 @@ font-weight: 500;
 .activity-square h3 {
   font-size: 1rem;
   font-weight: 800;
-  padding: 0.2rem 0 0.2rem 1.5rem;
+  padding: 1.2rem 0 3rem 1.5rem;
   margin: 0;
 }
 
 @media (min-width: 768px) and (max-width: 1049px) {
   .activity {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: repeat(3, 12rem); 
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 12rem);
   }
 }
 
 /************ popular styles ************/
 .popular {
+  display: grid;
+  grid-template-columns: 1fr;
+  /*grid-template-rows: auto repeat(3, 9rem); */
+  column-gap: 2rem;
+  row-gap: 2rem;
+  padding: 10px;
   background-color: var(--gris);
-  height: fit-content;
   grid-area: popular;
 }
 
+@media screen and (min-width: 1050px) {
+  .popular {
+    display: grid;
+    border-radius: 1.5rem;
+    align-items: start;
+    padding: 2rem;
+    row-gap: 2rem;
+  }
+}
 
-.popularTitles p,
-.popularTitles h3 {
+.section-popular-title {
+  display: flex;
+  justify-content: space-between;
   margin: 0;
+}
+
+.popularTitles h3 {
+  margin: 0.10rem 0 0 0;
+}
+
+.popularTitles p {
+  margin: 0.5rem 0;
 }
 
 .popular-title {
   display: flex;
   align-items: center;
+  margin: 0;
   justify-content: space-between;
 }
 
-.popularContainer {
-  display: grid;
-  grid-template-columns: 1fr;
-  /*grid-template-rows: auto repeat(3, 9rem); */
-  column-gap: 2rem;
-  row-gap: 1rem;
-  padding: 0 1rem 1.5rem 1rem;
+.popular-title h2 {
+  margin: 0;
 }
 
 .popular-square {
@@ -482,16 +500,18 @@ font-weight: 500;
   align-items: stretch;
   height: 100%;
   overflow: auto;
-  border-radius: 1.5rem;
+  border-radius: 1.75rem;
   background-color: #fff;
-  padding: 0.5rem;
+  padding: 0.25rem;
   box-shadow: 0 0 16px var(--gris);
-  
+  margin: 0;
 }
 
 .popular-square figure {
   position: relative;
   margin: 0;
+  min-height: 100%;
+  min-width: 33%;
   width: 33%;
 }
 
@@ -509,6 +529,7 @@ font-weight: 500;
   flex-direction: column;
   justify-content: space-between;
   padding-left: 15px;
+  min-height: 130px;
 }
 
 .popularSubTitle {
@@ -522,7 +543,7 @@ font-weight: 500;
 /*********** Footer styles ***********/
 footer {
   background-color: var(--gris);
-  padding: 1rem 0 0 2rem;
+  padding: 1rem 0 2rem 2rem;
 }
 
 footer h2 {
